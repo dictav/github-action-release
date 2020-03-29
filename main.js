@@ -1,14 +1,14 @@
 // @flow
 
-import core from '@actions/core';
-import github from '@actions/github';
+import { info, setFailed } from '@actions/core';
+import { context } from '@actions/github';
 
 try {
-  const token = core.getInput('github-token');
-  const client = new github.GitHub(token);
-  const payload = github.context.payload;
+  // const token = core.getInput('github-token');
+  // const client = new github.GitHub(token);
+  const payload = context.payload;
 
-  core.Info(payload.title);
+  info(payload.title);
 } catch (err) {
-  core.setFailed(err.message);
+  setFailed(err.message);
 }

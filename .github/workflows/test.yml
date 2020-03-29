@@ -1,8 +1,8 @@
-name: release
+name: test
 on: [push]
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -11,6 +11,3 @@ jobs:
       - run: npm run lint
       - run: npm run fmt:test
       - run: npm test
-      - uses: ./
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
