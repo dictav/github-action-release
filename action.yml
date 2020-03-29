@@ -1,6 +1,7 @@
-name: Release
+name: dictav/release
 description: Create a new release
 branding:
+  icon: arrow-up
   color: green
 
 inputs:
