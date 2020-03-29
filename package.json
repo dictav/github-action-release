@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "lint": "eslint '**/*.js'",
-    "fmt": "prettier --write '**/*.js'",
-    "fmt:test": "prettier --check '**/*/js'",
+    "fmt": "prettier --write '**/*'",
+    "fmt:test": "prettier --check '**/*'",
     "test": "mocha --require esm --ignore 'node_modules/**/*.js' '**/*test.js'"
   },
   "keywords": [

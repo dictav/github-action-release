@@ -12,4 +12,4 @@ This action create a new release
 
 uses: dictav/github-action-release
 with:
-   github-token: ${{ secrets.GITHUB_TOKEN }}
+github-token: \${{ secrets.GITHUB_TOKEN }}

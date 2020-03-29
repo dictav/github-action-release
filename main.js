@@ -9,7 +9,6 @@ try {
   const payload = github.context.payload;
 
   core.Info(payload.title);
-
 } catch (err) {
   core.setFailed(err.message);
 }
