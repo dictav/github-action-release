@@ -1,0 +1,33 @@
+{
+  "name": "github-action-release",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint '**/*.js'",
+    "fmt": "prettier --write '**/*.js'",
+    "fmt:test": "prettier --check '**/*/js'",
+    "test": "mocha --require esm --ignore 'node_modules/**/*.js' '**/*test.js'"
+  },
+  "keywords": [
+    "github actions"
+  ],
+  "author": "Shintaro Abe",
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.2.3",
+    "@actions/github": "^2.1.1",
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "flow-bin": "^0.121.0",
+    "mocha": "^7.1.1",
+    "prettier": "^2.0.2"
+  }
+}

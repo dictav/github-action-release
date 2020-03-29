@@ -1,0 +1,11 @@
+name: Release
+description: Create a new release
+branding:
+  color: green
+
+inputs:
+  github-token:
+    required: true
+runs:
+  using: node12
+  main: index.js

@@ -1,0 +1,18 @@
+on:
+  - pull_request:
+      - types: [merged]
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        runs: npm run lint
+      - uses: actions/setup-node@v1
+        runs: npm run fmt:test
+      - uses: actions/setup-node@v1
+        runs: npm test
+      - uses: ./
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
