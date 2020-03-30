@@ -1,2 +1,6 @@
+.eslintignore
+.flowconfig
 .gitignore
 .prettierignore
+
+flow-typed/npm
